@@ -1,14 +1,18 @@
+package dados;
+
 import java.math.BigDecimal;
 
 public class PixData {
     private String chavePix;
+    private boolean isTelefone;
     private String nomeDoRecebedor;
     private String cidadeDoRecebedor;
     private String idDaTransação;
     private BigDecimal valor;
 
-    public PixData(String ChavePix, String nomeDoRecebedor, String cidadeDoRecebedor, String idDaTransação, BigDecimal valor) {
+    public PixData(String ChavePix, boolean isTelefone, String nomeDoRecebedor, String cidadeDoRecebedor, String idDaTransação, BigDecimal valor) {
         this.chavePix = ChavePix;
+        this.isTelefone = isTelefone;
         this.nomeDoRecebedor = nomeDoRecebedor;
         this.cidadeDoRecebedor = cidadeDoRecebedor;
         this.idDaTransação = idDaTransação;
@@ -21,6 +25,14 @@ public class PixData {
 
     public void setChavePix(String chavePix) {
         this.chavePix = chavePix;
+    }
+
+    public boolean isTelefone() {
+        return isTelefone;
+    }
+
+    public void setTelefone(boolean telefone) {
+        isTelefone = telefone;
     }
 
     public String getNomeDoRecebedor() {
